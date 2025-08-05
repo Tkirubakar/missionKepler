@@ -1,0 +1,49 @@
+.contactSection{
+  padding: 5rem 8rem;
+  background: #F7F7F7;
+}
+
+.innnerContactSection{
+  width: 35%;
+  margin: 0 auto;
+}
+
+.contact {
+  margin-top: 60px;
+  max-width: 1283px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contactSection h2 {
+  font-size: 2rem;
+  color: #790e56;
+  font-weight: 400;
+  text-align: left;
+  margin: 0;
+}
+
+.contactSection p {
+  color: #790e56;
+  text-align: left;
+  font-weight: 300;
+  margin: 5px 0px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-top: 20px;
+}
+
+button {
+  align-self: flex-start;
+  font-size: 14px;
+  background-color: #6b004a;
+  color: white;
+  padding: 10px 24px;
+  border: none;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+}
