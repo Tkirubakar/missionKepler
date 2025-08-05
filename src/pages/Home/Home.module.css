@@ -1,0 +1,31 @@
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.destinationSection {
+  text-align: center;
+  background: #ffff;
+  padding: 6rem 10rem;
+}
+
+.destinationSection h2 {
+  font-size: 2rem;
+  color: #790e56;
+  font-weight: 400;
+  text-align: left;
+  margin: 0;
+}
+.description{
+  color: #790e56;
+  text-align: left;
+  font-weight: 300;
+  margin: 5px 0px;
+}
+
+.cardsWrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3%;
+  padding: 30px 0px;
+}

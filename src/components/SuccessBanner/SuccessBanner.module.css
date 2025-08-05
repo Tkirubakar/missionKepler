@@ -1,0 +1,13 @@
+.banner {
+  background-color: #7A1755;
+  padding: 20px;
+  margin: 0 auto;
+  width: 40%;
+  font-weight: 500;
+  line-height: 1.6;
+  text-align: center;
+}
+.banner p{
+  color: #fff;
+  font-weight: 300;
+}

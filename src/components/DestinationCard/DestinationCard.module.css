@@ -1,0 +1,50 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+}
+
+.card h3 {
+  font-size: 2rem;
+  margin-bottom: 4px;
+  color: #000;
+  font-weight: 100;
+}
+
+.card .city {
+  font-weight: 600;
+  font-size: 16px;
+  color: #000;
+  margin: 6px 0px;
+}
+
+.card p {
+  font-size: 15px;
+  color: #555;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.card a {
+  background: #7A1755;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 14px;
+  padding: 10px 15px;
+}
+
+.card button {
+  background-color: #6b004a;
+  color: white;
+  padding: 6px 14px;
+  border: none;
+  font-size: 12px;
+  cursor: pointer;
+  align-self: flex-start;
+
+}

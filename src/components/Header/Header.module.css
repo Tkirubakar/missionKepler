@@ -1,0 +1,21 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 10rem;
+}
+
+.logo {
+  height: 30px;
+}
+
+.nav {
+  display: flex;
+  color: #7A1755;
+  gap: 40px;
+}
+
+.nav a {
+  font-size: 12px;
+  text-decoration: none;
+}
