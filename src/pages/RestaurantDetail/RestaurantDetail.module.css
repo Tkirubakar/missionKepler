@@ -8,9 +8,10 @@
 .restaurantName {
   font-size: 40px;
   font-weight: 400;
-  margin-bottom: 10px;
+  margin-bottom: 5%;
   text-align: center;
   text-transform: uppercase;
+  letter-spacing: 8px;
 }
 
 .description {
@@ -40,14 +41,31 @@
 }
 
 .imageWrapper {
-  flex: 0 0 50%;
-  height: 32vh; 
+  flex: 0 0 49%;
+  height: 37vh; 
 }
 
 .menuImage {
   width: 100%;
   height: 100%;
   object-fit: cover; 
+}
+
+.menuCard.odd img{
+  width: 96%;
+}
+
+.menuCard.odd .restaurantDetails{
+  margin-left: 40px;
+}
+
+.menuCard.even img{
+  width: 96%;
+  float: right;
+}
+
+.menuCard.even .restaurantDetails{
+  margin-right: 22px;
 }
 
 .menuCard.odd .menuImage {
@@ -75,6 +93,8 @@
   font-family: 'Inter', sans-serif;
   font-size: 20px;
   color: #fff;
+  text-align: justify;
+  letter-spacing: .1px;
 }
 
 .menuPrice {

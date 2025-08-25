@@ -31,7 +31,7 @@ export default function Header() {
             to="/reserve"
             className={({ isActive }) => (isActive ? styles.active : "")}
           >
-            RESERVE
+            RESERVE A TABLE
           </NavLink>
         </nav>
       </div>

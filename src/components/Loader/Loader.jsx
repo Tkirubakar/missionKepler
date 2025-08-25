@@ -1,4 +1,10 @@
 import React from 'react';
+import styles from "./Loader.module.css";
+
 export default function Loader(){
-  return <div style={{padding:24, textAlign:'center'}}>Loading...</div>
+  return(
+    <div className={styles.loader}>
+      Loading...
+    </div>
+  )
 }

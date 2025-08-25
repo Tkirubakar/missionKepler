@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { fetchRestaurants } from "../../services/api";
 import styles from "./Reserve.module.css";
-import InputField from "../../components/common/InputField";
-import SelectField from "../../components/common/SelectField";
-import ConfirmationMessage from "../../components/common/ConfirmationMessage";
+import InputField from "../../components/Common/InputField";
+import SelectField from "../../components/Common/SelectField";
+import Loading from "../../components/Loader/Loader";
+import ConfirmationMessage from "../../components/Common/ConfirmationMessage";
 
 export default function Reserve() {
   const [restaurants, setRestaurants] = useState([]);
@@ -89,7 +90,7 @@ export default function Reserve() {
     return true;
   });
 
-  if (loading) return <div>Loading...</div>;
+  if (loading) return <Loading />;
 
   return (
     <div className="pageBackground">
@@ -234,6 +235,7 @@ export default function Reserve() {
           </form>
 
           {messageData && <ConfirmationMessage {...messageData} />}
+          <p className={styles.confirmation}>For cancellation or further queries contact contact the restaurants</p>
         </div>
       </div>
     </div>

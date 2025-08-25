@@ -62,7 +62,7 @@ export default function RestaurantDetail() {
                           <div className={styles.restaurantDetails}>
                             <h3 className={styles.menuTitle}>{item.name}</h3>
                             <p className={styles.menuDescription}>{item.description}</p>
-                            <div className={styles.menuPrice}>${item.Price}</div>
+                            <div className={styles.menuPrice}>$ {item.Price}</div>
                           </div>
                         </div>
                       );
