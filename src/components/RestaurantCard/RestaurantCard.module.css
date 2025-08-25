@@ -1,0 +1,201 @@
+.card {
+  cursor: pointer;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.image {
+  height: 350px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.image::before {
+  content: "";
+  position: absolute;
+  inset: 0; /* top:0; right:0; bottom:0; left:0; */
+  background-image: inherit; /* uses the inline backgroundImage from the .image element */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transform: scale(1);
+  transition: transform 0.45s cubic-bezier(.2,.8,.2,1);
+  will-change: transform;
+  z-index: 0; /* behind overlay and hover content */
+}
+
+.overlay {
+  position: absolute;
+  left: 0;
+  width: 94%;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  padding: 12px;
+  z-index: 1;
+  bottom: 0;
+}
+
+.overlayVisible {
+  opacity: 1;
+}
+
+.topRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.name {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.typeCert {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.dot {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-left: 6px;
+  background-color: transparent;
+  border-width: 2px;
+  border-style: solid;
+  box-sizing: border-box;
+  position: relative;
+  border-radius: 3px;
+}
+.veg {
+  border-color: green;
+}
+
+.veg::after {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 10px;
+  height: 10px;
+  background-color: green;
+  border-radius: 50%;
+}
+
+.nonveg {
+  border-color: #AA2828;
+  border-radius: 3px;
+}
+
+.nonveg::after {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 10px;
+  height: 10px;
+  background-color: #AA2828;
+  border-radius: 50%;
+}
+
+.award {
+  width: 25px;
+  height: 25px;
+}
+
+.infoBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.location {
+  font-size: 14px;
+  opacity: 0.85;
+}
+
+.bottomRow {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+}
+
+.rating {
+  background: #008000;
+  color: #fff;
+  padding: 2px 6px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.hoverBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  align-items: flex-start;
+  opacity: 0;
+  transition: opacity 0.33s ease;
+  pointer-events: none;
+  /* z-index: 2; */
+}
+
+.cuisines {
+  font-size: 10px;
+}
+
+.viewMore {
+  background: transparent;
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  font-weight: 800;
+  text-decoration: underline;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+  font-style: italic;
+}
+
+.viewMore:hover {
+  background-color: #ff6347;
+  transform: translateX(2px);
+}
+
+.card:hover .hoverBlock {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.starIcon {
+  color: gold;
+  margin-right: 4px;
+}
+
+.arrowIcon {
+  margin-left: 6px;
+}
+
+.viewMore{
+  text-transform: uppercase;
+}
+
+.viewMore svg{
+ margin-left: -6px;
+}
+
+.card:hover .image::before {
+  transform: scale(1.06);
+}
