@@ -18,7 +18,7 @@ export default function InputField({
     styles.input,
     isDate && styles.dateInput,
     isTime && styles.timeInput,
-    className
+    className,
   ]
     .filter(Boolean)
     .join(" ");
@@ -44,5 +44,5 @@ InputField.propTypes = {
   value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   onChange: PropTypes.func.isRequired,
   required: PropTypes.bool,
-  className: PropTypes.string
+  className: PropTypes.string,
 };

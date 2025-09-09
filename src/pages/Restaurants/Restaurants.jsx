@@ -1,48 +1,46 @@
-import React, { useState, useEffect } from 'react';
-import { fetchRestaurants } from '../../services/api';
-import Loader from '../../components/Loader/Loader';
-import RestaurantCard from '../../components/RestaurantCard/RestaurantCard';
-import styles from './Restaurants.module.css';
+import React, { useState, useEffect } from "react";
+import { fetchRestaurants } from "../../services/api";
+import Loader from "../../components/Loader/Loader";
+import RestaurantCard from "../../components/RestaurantCard/RestaurantCard";
+import styles from "./Restaurants.module.css";
 
-export default function Restaurants(){
-  const [data, setData] = useState([]);
+export default function Restaurants() {
+  const [restaurantList, setRestaurantList] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
 
-  useEffect(()=>{
-    let mounted=true;
-    fetchRestaurants()
-      .then(res => { 
-        if(mounted){
-          const restaurantsArray = Array.isArray(res) ? res : (res.data || []);
-          setData(restaurantsArray);
-          setLoading(false);
-        }
-      })
-      .catch(e => { 
-        if(mounted){
-          setError(e.message);
-          setLoading(false);
-        }
-      });
-    return ()=> mounted=false;
-  },[]);
+  useEffect(() => {
+    fetchRestaurants().then((restaurantsResponse) => {
+      const restaurantsArray = Array.isArray(restaurantsResponse)
+        ? restaurantsResponse
+        : restaurantsResponse?.data || [];
+      setRestaurantList(restaurantsArray);
+      setLoading(false);
+    });
+  }, []);
 
-  if(loading) return <Loader/>;
-  if(error) return <div style={{padding:20}}>Failed to load restaurants: {error}</div>;
-  console.log(fetchRestaurants)
+  if (loading) return <Loader />;
+
   return (
     <div>
       <div className="pageBackground">
         <div className="pageBackgroundInner">
           <div className={styles.grid}>
-            {(data || []).map(r => (
-              <RestaurantCard key={r.id} restaurant={{
-                ...r,
-                image: r.image || r.thumbnail || 'https://via.placeholder.com/300x200',
-                isVeg: r.veg || false,
-                isCertified: r.isCertified ?? r.is_certified ?? false,
-              }} />
+            {(restaurantList || []).map((restaurantItem) => (
+              <RestaurantCard
+                key={restaurantItem.id}
+                restaurant={{
+                  ...restaurantItem,
+                  image:
+                    restaurantItem.image ||
+                    restaurantItem.thumbnail ||
+                    "https://via.placeholder.com/300x200",
+                  isVeg: restaurantItem.veg || false,
+                  isCertified:
+                    restaurantItem.isCertified ??
+                    restaurantItem.is_certified ??
+                    false,
+                }}
+              />
             ))}
           </div>
         </div>

@@ -15,15 +15,15 @@
 .image::before {
   content: "";
   position: absolute;
-  inset: 0; /* top:0; right:0; bottom:0; left:0; */
-  background-image: inherit; /* uses the inline backgroundImage from the .image element */
+  inset: 0;
+  background-image: inherit;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   transform: scale(1);
   transition: transform 0.45s cubic-bezier(.2,.8,.2,1);
   will-change: transform;
-  z-index: 0; /* behind overlay and hover content */
+  z-index: 0;
 }
 
 .overlay {

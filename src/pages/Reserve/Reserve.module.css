@@ -5,6 +5,7 @@
   color: #fff;
   max-width: 500px;
   margin: 0 auto;
+  font-size: 30px;
 }
 
 h2 {
@@ -188,4 +189,33 @@ input[type="time"]:focus::-webkit-datetime-edit {
 
 .preference{
   padding: 10px 0px;
+}
+
+.confirmation{
+  font-size: 14px;
+  text-align: center;
+  color: #B8B8B8;
+}
+
+.confirmationContainer {
+  padding: 20px;
+  border-radius: 12px;
+  color: #fff;
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 58vh; 
+  text-align: center;
+}
+
+.confirmationMessage {
+  font-size: 25px;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+.confirmationMessage strong {
+  color: #FF6B00;
 }

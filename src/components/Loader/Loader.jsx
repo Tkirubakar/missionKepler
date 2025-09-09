@@ -1,4 +1,12 @@
-import React from 'react';
-export default function Loader(){
-  return <div style={{padding:24, textAlign:'center'}}>Loading...</div>
+import React from "react";
+import styles from "./Loader.module.css";
+
+function Loading() {
+  return (
+    <div className={styles.loadingContainer}>
+      Loading...
+    </div>
+  );
 }
+
+export default Loading;
