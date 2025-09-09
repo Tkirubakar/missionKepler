@@ -1,0 +1,50 @@
+.header {
+  background: rgba(19, 20, 22, 1);
+  padding: 18px 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.headerContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1400px;
+  padding: 0 50px;
+}
+
+.logo {
+  font-family: 'Amatic SC', cursive;
+  font-weight: 700;
+  font-size: 30px;
+  color: rgba(255, 255, 255, 1);
+  letter-spacing: 1px;
+}
+
+.nav {
+  display: flex;
+  font-family: 'Lato', sans-serif;
+  gap: 230px;
+  font-weight: 600;
+}
+
+.nav a {
+  color: #fff;
+}
+
+.active {
+  color: #FF6B00 !important;
+}
+
+.homeHeader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(93, 93, 93, 0.3);
+  border-bottom-left-radius: 100px;
+  border-bottom-right-radius: 100px;
+  z-index: 10;
+  padding: 18px 0;
+}
