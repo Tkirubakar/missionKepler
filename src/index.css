@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Lato:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Lato:wght@300;400;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+
+html,body,#root{ 
+  height:100%; 
+}
+body{ 
+  font-family: 'Poppins', Arial, sans-serif; 
+  margin:0; 
+  background:#fff; 
+  color:#1b1b1b 
+}
+
+a{ 
+  text-decoration:none; 
+  color:inherit 
+}
+.app-container{ 
+  max-width:1283px; 
+  margin:0 auto; 
+  padding:20px 
+}
+
+.pageBackground {
+  position: relative;
+  width: 100%;
+  background: url('../public/images/Rectangle\ 10.jpg') no-repeat center center / cover;
+  padding: 4% 0;
+  min-height: auto;
+}
+
+.pageBackground::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+.pageBackgroundInner {
+  position: relative;
+  z-index: 2;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+  color: #fff;
+}
