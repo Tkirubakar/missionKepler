@@ -1,56 +1,41 @@
-import React, { useState, useEffect, useCallback } from 'react';
-import PropTypes from 'prop-types';
-import styles from './Carousel.module.css';
-import useInterval from '../../utils/useInterval';
+import React, { useState, useEffect } from "react";
+import PropTypes from "prop-types";
+import styles from "./Carousel.module.css";
+import Image from "../Common/Image";
+import Button from "../Common/Button";
 
-function Carousel({ items, interval = 3000 }) {
-  const [index, setIndex] = useState(0);
-  const [pause, setPause] = useState(false);
-  const count = items?.length || 0;
-
-  const next = useCallback(() => setIndex(i => (i + 1) % count), [count]);
-
-  // Auto-slide respecting pause
-  useInterval(() => {
-    if (!pause && count > 0) {
-      next();
-    }
-  }, count > 0 ? interval : null);
-
-  const goToSlide = (idx) => {
-    setIndex(idx);
-    setPause(true); // pause after clicking
-    setTimeout(() => setPause(false), interval); // resume after interval
-  };
+export default function Carousel({ items, interval = 3000 }) {
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
-    if (index >= count) setIndex(0);
-  }, [count, index]);
+    const timer = setInterval(
+      () => setCurrentIndex((prevIndex) => (prevIndex + 1) % items.length),
+      interval
+    );
+    return () => clearInterval(timer);
+  }, [items.length, interval]);
 
-  if (!items || items.length === 0) return null;
+  if (!items || items.length === 0) {
+    return null;
+  }
 
   return (
     <div className={styles.carousel}>
       <div className={styles.imageWrap}>
-        <img
-          key={index}
-          src={items[index].image}
-          alt={items[index].title || 'slide'}
+        <Image
+          src={items[currentIndex].image}
+          alt={items[currentIndex].title}
+          className={styles.carouselImage}
         />
-        <p
-          key={'desc-' + index}
-          className={`${styles.centerOverlay} ${styles.fadeText}`}
-        >
-          {items[index].description}
-        </p>
+        <p className={styles.centerOverlay}>{items[currentIndex].description}</p>
       </div>
 
       <div className={styles.stepper}>
-        {items.map((_, idx) => (
-          <button
-            key={idx}
-            className={`${styles.dot} ${idx === index ? styles.active : ''}`}
-            onClick={() => goToSlide(idx)}
+        {items.map((_, index) => (
+          <Button
+            key={index}
+            className={`${styles.dot} ${index === currentIndex ? styles.active : ""}`}
+            onClick={() => setCurrentIndex(index)}
           />
         ))}
       </div>
@@ -59,12 +44,12 @@ function Carousel({ items, interval = 3000 }) {
 }
 
 Carousel.propTypes = {
-  items: PropTypes.arrayOf(PropTypes.shape({
-    image: PropTypes.string,
-    title: PropTypes.string,
-    description: PropTypes.string
-  })),
-  interval: PropTypes.number
+  items: PropTypes.arrayOf(
+    PropTypes.shape({
+      image: PropTypes.string,
+      title: PropTypes.string,
+      description: PropTypes.string,
+    })
+  ).isRequired,
+  interval: PropTypes.number,
 };
-
-export default Carousel;

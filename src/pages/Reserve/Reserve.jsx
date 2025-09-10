@@ -1,13 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { fetchRestaurants } from "../../services/api";
 import styles from "./Reserve.module.css";
-
 import InputField from "../../components/Common/InputField";
 import SelectField from "../../components/Common/SelectField";
+import Loading from "../../components/Loader/Loader";
+import ConfirmationMessage from "../../components/ConfirmationMessage/ConfirmationMessage";
 import Button from "../../components/Common/Button";
 import Image from "../../components/Common/Image";
-import Loading from "../../components/Loader/Loader";
-import ConfirmationMessage from "../../components/Common/ConfirmationMessage";
 
 export default function Reserve() {
   const [restaurants, setRestaurants] = useState([]);
@@ -28,14 +27,17 @@ export default function Reserve() {
   const [phoneError, setPhoneError] = useState("");
 
   useEffect(() => {
-    fetchRestaurants().then((restaurantList) => {
-      setRestaurants(restaurantList || []);
-      setLoading(false);
-    });
+    fetchRestaurants()
+      .then((restaurantList) => {
+        setRestaurants(restaurantList || []);
+        setLoading(false);
+      })
+      .catch(() => setLoading(false));
   }, []);
 
   const handle = (key) => (event) => {
     const { value } = event.target;
+
     if (key === "phone") {
       if (/^\d{0,10}$/.test(value)) {
         setForm((prevForm) => ({ ...prevForm, [key]: value }));
@@ -54,6 +56,7 @@ export default function Reserve() {
 
   const submit = (e) => {
     e.preventDefault();
+
     if (form.phone.length !== 10) {
       setPhoneError("Phone must be 10 digits");
       return;
@@ -71,7 +74,6 @@ export default function Reserve() {
       date: formatDate(form.date),
     });
 
-    // reset form fields (optional, since we hide it anyway)
     setForm({
       firstName: "",
       lastName: "",
@@ -91,8 +93,7 @@ export default function Reserve() {
     ...new Set(
       restaurants
         .filter((restaurant) => {
-          if (form.preference === "veg")
-            return restaurant.type?.includes("Veg");
+          if (form.preference === "veg") return restaurant.type?.includes("Veg");
           if (form.preference === "non-veg")
             return restaurant.type?.includes("Non-Veg");
           return true;
@@ -102,7 +103,7 @@ export default function Reserve() {
     ),
   ].filter(Boolean);
 
-  // Filter restaurants
+  // Filter restaurants based on selected category
   const filteredRestaurants = restaurants.filter((restaurant) => {
     if (form.category && !restaurant.cuisine?.includes(form.category))
       return false;
@@ -118,14 +119,7 @@ export default function Reserve() {
     <div className="pageBackground">
       <div className="pageBackgroundInner">
         <div className={styles.formContainer}>
-          {messageData ? (
-            <>
-              <ConfirmationMessage {...messageData} />
-              <p className={styles.confirmation}>
-                For cancellation or further queries contact the restaurants
-              </p>
-            </>
-          ) : (
+          {!messageData ? (
             <form onSubmit={submit}>
               <div className={styles.row}>
                 <InputField
@@ -158,9 +152,7 @@ export default function Reserve() {
                   required
                 />
                 {phoneError && (
-                  <p
-                    style={{ color: "red", fontSize: "13px", marginTop: "5px" }}
-                  >
+                  <p style={{ color: "red", fontSize: "13px", marginTop: "5px" }}>
                     {phoneError}
                   </p>
                 )}
@@ -231,7 +223,7 @@ export default function Reserve() {
               <div className={styles.singleRow}>
                 <label className={styles.label}>No of persons</label>
                 <div className={styles.personCounter}>
-                  <button
+                  <Button
                     type="button"
                     className={styles.counterBtn}
                     onClick={() =>
@@ -244,10 +236,13 @@ export default function Reserve() {
                     <Image
                       src={process.env.PUBLIC_URL + "/images/Line3.png"}
                       alt="Minus"
+                      className={styles.iconImg}
                     />
-                  </button>
+                  </Button>
+
                   <span className={styles.counterValue}>{form.people}</span>
-                  <button
+
+                  <Button
                     type="button"
                     className={styles.counterBtn}
                     onClick={() =>
@@ -260,15 +255,25 @@ export default function Reserve() {
                     <Image
                       src={process.env.PUBLIC_URL + "/images/plus.png"}
                       alt="Plus"
+                      className={styles.iconImg}
                     />
-                  </button>
+                  </Button>
                 </div>
               </div>
 
               <div className={styles.centerButton}>
-                <Button type="submit">RESERVE MY TABLE</Button>
+                <Button type="submit" className={styles.submitButton}>
+                  RESERVE MY TABLE
+                </Button>
               </div>
             </form>
+          ) : (
+            <>
+              <ConfirmationMessage {...messageData} />
+              <p className={styles.confirmation}>
+                For cancellation or further queries contact the restaurants
+              </p>
+            </>
           )}
         </div>
       </div>
