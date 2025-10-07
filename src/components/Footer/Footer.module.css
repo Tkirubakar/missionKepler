@@ -1,0 +1,12 @@
+.footer {
+  padding: 16px;
+  text-align: left;
+  background: #ededed;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  color: #212121;
+}
+.footer p {
+  width: 1483px;   
+  margin: 0 auto; 
+}

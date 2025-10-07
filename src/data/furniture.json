@@ -1,0 +1,222 @@
+{
+  "categories": [
+    {
+      "id": "couches",
+      "name": "Couches",
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages",
+      "image": "/images/couches.jpg"
+    },
+    {
+      "id": "chairs",
+      "name": "Chairs",
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s ",
+      "image": "/images/chairs.jpg"
+    },
+    {
+      "id": "dining",
+      "name": "Dining",
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages",
+      "image": "/images/dining.jpg"
+    }
+  ],
+  "products": {
+    "couches": [
+      {
+        "id": "wood-single-sofa",
+        "title": "Wood Single Sofa Set - 3 Sets",
+        "price": 26990,
+        "image": "/images/couch1.jpg",
+        "guarantee": "2 Years guarantee",
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy"
+      },
+      {
+        "id": "two-seater-couch",
+        "title": "2 Seater Couch",
+        "price": 32990,
+        "image": "/images/couch2.jpg",
+        "guarantee": "1 Year guarantee",
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy"
+      },
+      {
+        "id": "yellow-sofa-set",
+        "title": "3 Seater Yellow Sofa Set",
+        "price": 42990,
+        "image": "/images/couch3.jpg",
+        "guarantee": "3 Years guarantee",
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy"
+      },
+      {
+        "id": "white-cushion-sofa",
+        "title": "White Cushion with Pillows",
+        "price": 21990,
+        "image": "/images/couch4.jpg",
+        "guarantee": "2 Years guarantee",
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy"
+      },
+      {
+        "id": "sofa-set-orange",
+        "title": "3 + 2 Couch and Sofa Set Orange",
+        "price": 36990,
+        "image": "/images/couch5.jpg",
+        "guarantee": "1 Year guarantee",
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy"
+      },
+      {
+        "id": "flat-back-sofa",
+        "title": "2 Seater Flat Back",
+        "price": 16980,
+        "image": "/images/couch6.jpg",
+        "guarantee": "1 Year guarantee",
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy"
+      },
+      {
+        "id": "kingsize-sofa",
+        "title": "Kingsize Couch - 3 Seater",
+        "price": 24490,
+        "image": "/images/couch7.jpg",
+        "guarantee": "4 Years guarantee",
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy"
+      },
+      {
+        "id": "sofa-cum-bed",
+        "title": "Sofa Cum Bed - Low Floor",
+        "price": 39890,
+        "image": "/images/couch8.jpg",
+        "guarantee": "2 Years guarantee",
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy"
+      }
+    ],
+    "chairs": [
+      {
+        "id": "modern-arm-chair",
+        "title": "Modern Arm Chair",
+        "price": 8990,
+        "image": "/images/chair1.jpg",
+        "guarantee": "2 Years guarantee",
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy"
+      },
+      {
+        "id": "rocking-chair",
+        "title": "Wooden Rocking Chair",
+        "price": 12990,
+        "image": "/images/chair2.jpg",
+        "guarantee": "3 Years guarantee",
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy"
+      },
+      {
+        "id": "office-chair",
+        "title": "Ergonomic Office Chair",
+        "price": 15990,
+        "image": "/images/chair3.jpg",
+        "guarantee": "1 Year guarantee",
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy"
+      },
+      {
+        "id": "dining-chair",
+        "title": "Classic Dining Chair",
+        "price": 4990,
+        "image": "/images/chair4.jpg",
+        "guarantee": "2 Years guarantee",
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy"
+      },
+      {
+        "id": "accent-chair",
+        "title": "Velvet Accent Chair",
+        "price": 11990,
+        "image": "/images/chair5.jpg",
+        "guarantee": "2 Years guarantee",
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy"
+      },
+      {
+        "id": "folding-chair",
+        "title": "Portable Folding Chair",
+        "price": 2990,
+        "image": "/images/chair6.jpg",
+        "guarantee": "1 Year guarantee",
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy"
+      },
+      {
+        "id": "recliner-chair",
+        "title": "Luxury Recliner Chair",
+        "price": 18990,
+        "image": "/images/chair7.jpg",
+        "guarantee": "3 Years guarantee",
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy"
+      },
+      {
+        "id": "plastic-chair",
+        "title": "Outdoor Plastic Chair",
+        "price": 1990,
+        "image": "/images/chair8.jpg",
+        "guarantee": "1 Year guarantee",
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy"
+      }
+    ],
+    "dining": [
+      {
+        "id": "6-seater-dining",
+        "title": "6 Seater Dining Table Set",
+        "price": 45990,
+        "image": "/images/dining1.jpg",
+        "guarantee": "3 Years guarantee",
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy"
+      },
+      {
+        "id": "4-seater-dining",
+        "title": "4 Seater Dining Table",
+        "price": 29990,
+        "image": "/images/dining2.jpg",
+        "guarantee": "2 Years guarantee",
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy"
+      },
+      {
+        "id": "glass-dining",
+        "title": "Glass Top Dining Set",
+        "price": 37990,
+        "image": "/images/dining3.jpg",
+        "guarantee": "3 Years guarantee",
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy"
+      },
+      {
+        "id": "wooden-dining",
+        "title": "Classic Wooden Dining",
+        "price": 34990,
+        "image": "/images/dining4.jpg",
+        "guarantee": "5 Years guarantee",
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy"
+      },
+      {
+        "id": "round-dining",
+        "title": "Round Dining Table - 4 Seater",
+        "price": 27990,
+        "image": "/images/dining5.jpg",
+        "guarantee": "2 Years guarantee",
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy"
+      },
+      {
+        "id": "marble-dining",
+        "title": "Marble Dining Table Set",
+        "price": 55990,
+        "image": "/images/dining6.jpg",
+        "guarantee": "4 Years guarantee",
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy"
+      },
+      {
+        "id": "extendable-dining",
+        "title": "Extendable Dining Table",
+        "price": 49990,
+        "image": "/images/dining7.jpg",
+        "guarantee": "3 Years guarantee",
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy"
+      },
+      {
+        "id": "bar-dining",
+        "title": "Bar Height Dining Set",
+        "price": 31990,
+        "image": "/images/dining8.jpg",
+        "guarantee": "2 Years guarantee",
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy"
+      }
+    ]
+  }
+}
