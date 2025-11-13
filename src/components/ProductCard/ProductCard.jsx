@@ -6,7 +6,6 @@ import styles from "./ProductCard.module.css";
 import { formatCurrency } from "../../utils/formatCurrency";
 import Button from "../common/Button/Button";
 import Image from "../common/Image/Image";
-import Divider from "../common/Divider/Divider";
 
 function ProductCard({ product, onAddToCart, onAddToWishlist }) {
   const { addToCart, addToWishlist } = useContext(StoreContext);
@@ -35,7 +34,7 @@ function ProductCard({ product, onAddToCart, onAddToWishlist }) {
         <RiShieldCheckFill className={styles.icon} /> {product.guarantee}
       </p>
 
-      <Divider className={styles.line} />
+      <div className={styles.dividerLine}></div>
 
       <div className={styles.actions}>
         <Button className={styles.wishlist} onClick={handleAddToWishlist}>

@@ -46,7 +46,7 @@
 }
 
 .sidePanel.near{
-  height: calc(103vh - 72px);
+  height: calc(109vh - 72px);
   top: -.5rem;
 }
 .toggle {

@@ -1,0 +1,38 @@
+.orderCardSection{
+  background-color: #f7f7f7;
+}
+
+.orderConfirmSection {
+  width: 1483px;
+  margin: 0 auto;
+  border-radius: 10px;
+  padding: 50px 20px;
+  text-align: left;
+}
+
+.orderHeader h2 {
+  margin: 0 0 6px 0;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #222;
+}
+
+.orderHeader p {
+  margin: 0 0 12px 0;
+  color: #222;
+  font-size: 1em;
+  padding-top: 8px;
+}
+
+.orderGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  padding-top: 15px;
+}
+
+.orderCard {
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+}

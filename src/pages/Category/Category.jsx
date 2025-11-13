@@ -5,6 +5,7 @@ import ProductCard from "../../components/ProductCard/ProductCard";
 import Cart from "../../components/Cart/Cart";
 import Wishlist from "../../components/Wishlist/Wishlist";
 import styles from "./Category.module.css";
+import { fetchCategoryProducts } from "../../services/furnitureService"; 
 
 function Category() {
   const { categoryId } = useParams();
@@ -13,59 +14,25 @@ function Category() {
   const [view, setView] = useState("cart");
   const { cart, wishlist, placeOrder } = useContext(StoreContext);
 
-  const [isNear, setIsNear] = useState(false);
-
   useEffect(() => {
-    fetch(
-      `https://jsonmockserver.vercel.app/api/shopping/furniture/products?category=${categoryId}`
-    )
-      .then((res) => res.json())
-      .then((data) => setProducts(data))
-      .catch(() =>
-        import("../../data/furniture.json").then((local) =>
-          setProducts(local.products[categoryId] || [])
-        )
-      );
+    async function loadProducts() {
+      const data = await fetchCategoryProducts(categoryId);
+      setProducts(data);
+    }
+    loadProducts();
   }, [categoryId]);
-
-  // scroll handler to toggle "near" class
-  useEffect(() => {
-    const THRESHOLD = 10; // px scrolled before toggling class
-    let ticking = false;
-
-    const onScroll = () => {
-      if (!ticking) {
-        window.requestAnimationFrame(() => {
-          const scrolled = window.scrollY || window.pageYOffset;
-          setIsNear(scrolled > THRESHOLD);
-          ticking = false;
-        });
-        ticking = true;
-      }
-    };
-
-    window.addEventListener("scroll", onScroll, { passive: true });
-
-    onScroll();
-
-    return () => {
-      window.removeEventListener("scroll", onScroll);
-    };
-  }, []);
 
   const handlePlaceOrder = () => {
     const order = placeOrder();
-    if (order) navigate("/");
+    if (order) navigate("/confirmOrder");
   };
-
-  const sidebarVisible = cart.length > 0 || wishlist.length > 0;
 
   return (
     <div className={styles.categoryPage}>
       <div className={styles.layout}>
         <div
           className={`${styles.products} ${
-            sidebarVisible ? styles.three : styles.four
+            cart.length > 0 || wishlist.length > 0 ? styles.three : styles.four
           }`}
         >
           {products.map((product) => (
@@ -78,10 +45,8 @@ function Category() {
           ))}
         </div>
 
-        {sidebarVisible && (
-          <div
-            className={`${styles.sidePanel} ${isNear ? styles.near : ""}`}
-          >
+        {(cart.length > 0 || wishlist.length > 0) && (
+          <div className={styles.sidePanel}>
             <div className={styles.toggle}>
               <button
                 className={view === "cart" ? styles.active : ""}
