@@ -1,0 +1,138 @@
+.teasersSection {
+  padding-top: 6px;
+  padding-bottom: 24px;
+}
+.sectionHeading {
+  font-size: 34px;
+  font-weight: 500;
+  margin: 6px 0 25px 0;
+  color: var(--text);
+}
+.grid {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+.card {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.mediaWrapper {
+  position: relative;
+  overflow: hidden;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display:block;
+}
+.overlayPlay {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 68px;
+  height: 68px;
+  background: #000000;
+  color: #fff;
+  font-size: 28px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.overlayPlay svg{
+    width: 20px;
+}
+
+.titleRow { 
+    display:flex; 
+    align-items:center; 
+    justify-content:flex-start; 
+}
+.titleText { 
+    font-weight:400; 
+    color:var(--text); 
+    font-size:18px; 
+}
+.adRow { 
+    min-height: 18px; 
+    margin-top: 4px; 
+}
+.adNotice { 
+    color: var(--muted); 
+    font-size: 13px; 
+}
+.adActive { 
+    color: #7ad0ff; 
+    font-size: 13px; 
+    font-weight:700; 
+}
+
+.mediaWrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.video {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.overlayPlay {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background: #000;
+  color: #fff;
+  font-size: 26px;
+  border-radius: 50%;
+  width: 65px;
+  height: 65px;
+  margin: auto;
+  cursor: pointer;
+}
+
+.adFullOverlay {
+  position: absolute;
+  inset: 0;  
+  z-index: 50;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.adFullImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.adRow {
+  margin-top: 8px;
+}
+
+.adNotice {
+  color: #bbb;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.adActive {
+  color: #fff;
+  border-radius: 6px;
+  font-weight: 700;
+  width: fit-content;
+}

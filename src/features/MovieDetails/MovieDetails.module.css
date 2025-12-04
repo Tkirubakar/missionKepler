@@ -1,0 +1,78 @@
+.detailsCard{ 
+    padding:8px 12px; 
+    color:var(--text); 
+    background:transparent; 
+}
+.title{ 
+    font-size:36px; 
+    margin:0 0 8px 0; 
+    font-weight:400; 
+}
+.likes{ 
+    color:var(--accent-yellow); 
+    font-weight:700; 
+    margin-bottom:12px; 
+}
+.description{ 
+    color:#fff; 
+    line-height:1.6;  
+    margin: 22px 0; 
+}
+.actorsTitle{ 
+    margin-top:14px; 
+    font-weight:700; 
+    color:#fff; 
+    text-transform: uppercase;
+}
+.actorsList{ 
+    color: #fff;
+    list-style: none;
+    padding: 0;
+ }
+ .actorsList li{
+    padding-bottom: 5px;
+ }
+.likeRow{ 
+    margin-top:12px; 
+}
+.likeAction{ 
+    padding: 8px 12px;
+    font-weight: 700;
+    cursor: pointer;
+    background: transparent;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+.likeAction svg{
+    fill: #fff;
+}
+.poster {
+  width: 180px;
+  min-width: 180px;
+  height: 260px;
+  position: relative;
+  overflow: hidden;
+  background: #0b0b0b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.posterImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.headerSection{
+    display: flex;
+    justify-content: space-between;
+}
+.countDown, .beforeCountDown{
+    color: #4B90E2;
+    font-size: 15px;
+    padding-top: 10px;
+    font-weight: 800;
+}

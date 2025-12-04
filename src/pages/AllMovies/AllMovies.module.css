@@ -1,0 +1,58 @@
+.container {
+  display: flex;
+  gap: 56px;
+  align-items: flex-start;
+  padding: 40px 0px;
+  max-width: 1200px;
+  margin: 0 auto;
+  color: var(--text);
+}
+
+.left {
+  flex: 1;
+}
+
+.headerRow {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.headerRow h2 {
+  font-size: 30px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.subtext {
+  color: var(--accent-blue);
+  font-weight: 700;
+  letter-spacing: 0.6px;
+}
+
+.info {
+  color: var(--muted);
+  margin: 12px 0;
+}
+
+.error {
+  color: #ff6b6b;
+  margin: 12px 0;
+  font-weight: 700;
+}
+
+.empty {
+  color: var(--muted);
+  padding: 18px 0;
+}
+
+.loadMoreRow {
+  margin-top: 26px;
+  display: flex;
+  justify-content: left;
+}
+
+.right {
+  width: 520px;
+}
