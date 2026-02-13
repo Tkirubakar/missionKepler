@@ -1,0 +1,7 @@
+.button {
+  border: none;
+  cursor: pointer;
+  font-family: "Product Sans", sans-serif;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}

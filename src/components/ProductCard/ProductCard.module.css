@@ -1,0 +1,94 @@
+.card {
+  background: #fff;
+  padding: 16px;
+}
+
+.image {
+  width: 100%;
+  border-radius: 0px 8px 8px;
+  margin-bottom: 12px;
+}
+
+.titlePrice{
+  display: flex;
+  justify-content: space-between;
+}
+
+.productTitle{
+  color: #292929;
+  font-size: 1em;
+  font-weight: 600;
+  margin: 6px 0px;
+}
+
+.price {
+  color: #292929;
+  font-weight: bold;
+  margin: 6px 0;
+}
+
+.desc {
+  font-size: 0.86rem;
+  color: #666;
+  line-height: 1.4;
+  min-height: 40px;
+  margin-top: 4px;
+}
+
+.guarantee {
+  display: flex;
+  align-items: center;
+  margin: 8px 0;
+  font-size: 0.7rem;
+  color: #008800;
+  text-transform: uppercase;
+  font-weight: 800;
+  margin: 0;
+}
+
+.guarantee .icon {
+  margin-right: 6px;
+  color: #008800;
+  font-size: 1.1rem;
+}
+
+.line{
+  border-top: 1px solid #f0f0f0;
+  margin: 10px 0;
+}
+
+.actions {
+  display: flex;
+  justify-content: end;
+  margin-top: 12px;
+}
+
+.wishlist{
+  background: transparent;
+  color: #888888;
+  text-transform: uppercase;
+  font-size: 0.76em;
+  padding: 0;
+  border-style: none;
+  padding-right: 25px;
+  cursor: pointer;
+}
+
+.addToCart {
+  background: #000;
+  color: #fff;
+  border: none;
+  border-bottom-right-radius: 5px;
+  cursor: pointer;
+  padding: 9px 23px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 0.8em;
+}
+
+.dividerLine {
+  width: 100%;
+  height: 1px;
+  background: #e0e0e0;
+  margin: 12px 0;
+}
